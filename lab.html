@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2.1</title>
+    <style type="text/css">
+        table{
+            border: 2px solid black;
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label> Last Name:</label>
+        <input type="text" id="name"> 
+        <label> First Name:</label>
+        <input type="text" id="d1"> <br><br>
+        <label> Section:</label>
+        <input type="text" id="sec"> 
+        <label> Year:</label>
+        <input type="number" id="yer"> 
+        <hr>
+        <br><br>
+        <label> Quiz:</label>
+        <input type="number" id="quiz">  <br><br>
+        <label> Assignment:</label> 
+        <input type="number" id="assignment">  <br><br>
+        <label>Recitation:</label>
+        <input type="number" id="recitation">  <br><br>
+        <label> Term Exam:</label>
+        <input type="number" id="term"> <br><br>
+        
+        <button type="button" onclick="krazy()">Show Computed Grades</button>
+    </form>
+
+    <br><br><br>
+    <p id="p1">Name: (Last name,First name)</p>
+    <p id="p2">Class:</p> <br>
+    
+    <table>
+        <label>Quiz</label>
+        <td id="quizz"></td>
+    </table>
+    <br>
+
+    <table>
+        <label>Assignment</label>
+        <td id="ass"></td>
+    </table>
+    <br>
+
+    <table>
+        <label>Recitation</label>
+        <td id="rec"></td>
+    </table>
+    <br>
+
+    <table>
+        <label>Term Exam</label>
+        <td id="termE"></td>
+    </table>
+
+
+    <script type="text/javascript">
+        function krazy(){
+        var a,b,c,d,e,f,g,h;
+        
+        a= document.getElementById("quiz").value;
+        b= document.getElementById("assignment").value;
+        c= document.getElementById("recitation").value;
+        d= document.getElementById("term").value;
+        e= document.getElementById("name").value;
+        f= document.getElementById("d1").value;
+        g= document.getElementById("sec").value;
+        h= document.getElementById("yer").value;
+        
+        
+
+        document.getElementById("p1").innerHTML= "Name: (Last name,First name)" + e+ "," + f ;
+        document.getElementById("p2").innerHTML= "Class:"+g + "-"+h;
+        document.getElementById("quizz").innerHTML= a;
+        document.getElementById("ass").innerHTML= b;
+        document.getElementById("rec").innerHTML= c;
+        document.getElementById("termE").innerHTML= d;
+
+     }
+
+    </script>
+</body>
+</html>
